@@ -25,4 +25,5 @@ jobs:
           scp -r build/* ec2-user@13.60.55.185:/usr/share/nginx/html/build/
           ssh ec2-user@13.60.55.185 'sudo systemctl restart nginx'
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }},
+          CI: false
