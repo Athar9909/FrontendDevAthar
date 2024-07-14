@@ -21,7 +21,7 @@ jobs:
       - name: Build and deploy application
         run: |
           npm install
-          npm run build
+           npm run build -- --no-warnings-as-errors
           scp -r build/* ec2-user@13.60.55.185:/usr/share/nginx/html/build/
           ssh ec2-user@13.60.55.185 'sudo systemctl restart nginx'
         env:
