@@ -12,7 +12,7 @@ function Footer() {
   let year = date.getFullYear();
   return (
     <Container fluid className="footer">
-      
+      jjj
     </Container>
   );
 }
